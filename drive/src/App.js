@@ -11,10 +11,10 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/signin" element={<Signin />} />
-                
             </Routes>
         </Router>
     );
 };
+
 
 export default App;

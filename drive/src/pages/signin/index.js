@@ -1,10 +1,15 @@
 import React from "react";
-
-
+import s from "./styles.css";
 
 const Signin = () => {
-    return <h1>signin page</h1>;
+    return (
+        <button type="button" className={s.signinBtn}>
+            Sign in with Google
+        </button>
+    );
 };
+
+
 
 
 export default Signin;
