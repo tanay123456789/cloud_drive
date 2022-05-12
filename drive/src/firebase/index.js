@@ -1,6 +1,7 @@
+/* eslint-disable no-undef */
 import { initializeApp } from "firebase/app";
 /*import { getAnalytics } from "firebase/analytics";*/
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider,signOut } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -16,4 +17,15 @@ export const auth = getAuth();
 export const app = initializeApp(firebaseConfig);
 /*export const analytics = getAnalytics(app);*/
 export const provider = new GoogleAuthProvider();
+export const logout=()=>{
+    signOut(auth).then(() => {
+        console.log("user logged out");
+    
+    }).catch((error) => {
+        console.log(error.code);
+        
+    });
+      
+
+};
 
