@@ -1,4 +1,7 @@
-import { createContext, useEffect } from "react";
+import React, {useState, useEffect,  createContext} from "react";
+
+import { onAuthStateChanged } from "firebase/auth";
+
 
 export const UserContext=createContext({user:null});
 
@@ -16,7 +19,7 @@ const UserProvider=()=>{
 
     },[])
     return (
-        <UserContext.Provider value={user}>{props.children}</UserContext.Provider>
+        <UserContext.Provider value={user}></UserContext.Provider>
     )
 
 }

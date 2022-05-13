@@ -1,12 +1,13 @@
 import React from "react";
-import { logout } from "./firebase";
+/*import { logout } from "../../firebase";*/
 
 const Home = () => {
     return (
         <>
             <h1>home page</h1>
-            <button onClick={logout}>signout</button>
+            
         </>
+        /*<button onClick={logout}>signout</button>*/
     );
 };
 

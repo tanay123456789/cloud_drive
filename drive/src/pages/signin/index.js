@@ -1,13 +1,13 @@
 import React, { useContext, useState,useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import {Navigate} from "react-router-dom";
-import {auth,provider} from ".../firebase";
+import {auth,provider} from "../../firebase";
 import {signInWithPopup} from "firebase/auth";
 import s from "./styles.css";
 
 const Signin = () => {
     
-    const context=useContext(UserContext);
+    const user=useContext(UserContext);
     const [navigate,setNavigate]=useState(null);
     useEffect(() => {
         if (user) {

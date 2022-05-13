@@ -5,7 +5,7 @@ import { logout } from "../../firebase";
 
 
 const Profile = () => {
-    const context=useContext(UserContext);
+    const user=useContext(UserContext);
     const [navigate, setNavigate] = useState(null);
 
     useEffect(() => {
@@ -17,8 +17,14 @@ const Profile = () => {
       <Navigate to={navigate} />;
     }
     return (
-        <h1>profile page</h1>;
-        <button onClick={logout}>Log out</button>;
+      <div>
+        <h1>profile page </h1>
+        
+        <button onClick={logout}>Log out</button>
+
+      </div>
+      
+
 
     );
 };

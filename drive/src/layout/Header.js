@@ -9,30 +9,10 @@ import { UserContext } from "../context/UserContext";
 
 
 const Header = () => {
-    const context=useContext(UserContext);
+    
     return(
-        <Navbar color="warning">
-            <Nav className="ml-auto">
-                {context.user?(
-                    <NavItem>
-                        <NavLink onClick={()=>{context.setUser(null);}} to="/signin">
-                        Logout
-
-                        </NavLink>
-                    </NavItem>):(
-                    <NavItem>
-                        <NavLink tag={Link} to="/signin">
-                        Signin
-                        </NavLink>
-
-                    </NavItem>
-                    
-                )}
-
-            </Nav>
-
-
-        </Navbar>
+        <h1>a header</h1>
+            
 
 
     ); 
