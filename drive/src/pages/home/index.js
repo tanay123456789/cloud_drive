@@ -1,13 +1,17 @@
+import { signInWithPopup } from "firebase/auth";
 import React from "react";
-/*import { logout } from "../../firebase";*/
+
 
 const Home = () => {
     return (
-        <>
+        <div>
             <h1>home page</h1>
             
-        </>
-        /*<button onClick={logout}>signout</button>*/
+        
+            <button onClick={signInWithPopup}>signin</button>
+
+        </div>
+            
     );
 };
 
