@@ -1,6 +1,5 @@
-import { signInWithPopup } from "firebase/auth";
 import React from "react";
-
+import Signin from "../signin";
 
 const Home = () => {
     return (
@@ -8,7 +7,7 @@ const Home = () => {
             <h1>home page</h1>
             
         
-            <button onClick={signInWithPopup}>signin</button>
+            <button onClick={Signin}>signin</button>
 
         </div>
             
