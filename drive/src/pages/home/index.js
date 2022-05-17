@@ -7,7 +7,7 @@ const Home = () => {
             <h1>home page</h1>
             
         
-            <button onClick={Signin}>signin</button>
+            <button>signin</button>
 
         </div>
             
