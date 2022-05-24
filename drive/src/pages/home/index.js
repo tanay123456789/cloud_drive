@@ -2,13 +2,17 @@ import React,{useState} from "react";
 import {FaFolder} from "react-icons/fa";
 import {FiFilePlus} from 'react-icons/fi';
 import { Modal } from "antd";
+import { Input } from 'antd';
+
 import  "./style.css";
 
 const Home = () => {
+    const [folderName,setFolderName]=useState('')
     const [isModalVisible,setIsModalVisible]=useState(false);
     const showModal = () => {
         setIsModalVisible(true);
       };
+      console.log(folderName)
     const handleOk = () => {
         setIsModalVisible(false);
       };
@@ -34,14 +38,14 @@ const Home = () => {
                 onClick={showModal}/>
             </div>
             <Modal 
-            title="Basic Modal" 
+            title="Folder upload" 
             visible={isModalVisible} 
             onOk={handleOk} 
             onCancel={handleCancel}
             centered>
-                <p>Some contents...</p>
-                <p>Sme contents...</p>
-                <p>oSome contents...</p>
+                <Input 
+                placeholder="Enter the folder name"
+                onChange={(event)=>setFolderName(event.target.value)}/> ;
             </Modal>
         
  

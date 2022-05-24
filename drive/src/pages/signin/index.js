@@ -1,34 +1,19 @@
-import React, { useContext, useState, useEffect } from "react";
-import { UserContext } from "../../context/UserContext";
-import { Navigate } from "react-router-dom";
-/*import {auth,provider} from "../../firebase";*/
-import { signInWithGoogle } from "../../firebase";
-import s from "./styles.css";
+import React from 'react'
+import GoogleButton from 'react-google-button'
 
-const Signin = () => {
-  // destructure
-  const {user} = useContext(UserContext);
-  // const [navigate, setNavigate] = useState(null);
-  // useEffect(() => {
-  //   if (user) {
-  //     setNavigate("/profile");
-  //   }
-  // }, [user]);
+const Signin=()=>{
+  return(
+    <div>
+      <GoogleButton 
+      onClick={() => { 
+        console.log('Google button clicked')
+      }}
+/>
 
-  // if (!user) {
-  //   <Navigate to={navigate} />;
-  // }
+    </div>
+    
 
-  if (user) {
-    <Navigate to="/profile" />;
-  }
-
-  return (
-    <button type="button" className={s.signinBtn} onClick={signInWithGoogle}>
-      Sign in with Google
-    </button>
-  );
-};
-
+  )
+}
 
 export default Signin;

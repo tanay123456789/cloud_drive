@@ -19,9 +19,9 @@ const App = () => {
             <Router>
                 
                 <Routes>
+                    <Route path="/" element={<Signin/>}/>
                     <Route path="/home/:id" element={<Home/>} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/signin" element={<Signin />} />
                     <Route path="*" element={<PageNotFound />}/>
                 </Routes>
                 
