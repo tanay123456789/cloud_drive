@@ -33,7 +33,12 @@ const Home = () => {
                 color='#f5ad42'
                 onClick={showModal}/>
             </div>
-            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <Modal 
+            title="Basic Modal" 
+            visible={isModalVisible} 
+            onOk={handleOk} 
+            onCancel={handleCancel}
+            centered>
                 <p>Some contents...</p>
                 <p>Sme contents...</p>
                 <p>oSome contents...</p>
