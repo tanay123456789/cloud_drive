@@ -5,7 +5,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   signOut,
-  signInWithPopup,
+  
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -22,7 +22,7 @@ export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 /*export const analytics = getAnalytics(app);*/
 export const provider = new GoogleAuthProvider();
-export const signInWithGoogle = () => {
+/*export const signInWithGoogle = () => {
   return signInWithPopup(auth, provider)
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -39,7 +39,7 @@ export const signInWithGoogle = () => {
       const errorCode = error.code;
       console.log(errorCode);
     });
-};
+};*/
 export const logout = () => {
   signOut(auth)
     .then(() => {
